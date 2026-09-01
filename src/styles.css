@@ -19,6 +19,14 @@
  */
 
 @theme inline {
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --color-nude: var(--nude);
+  --color-nude-deep: var(--nude-deep);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
+  --color-charcoal: var(--charcoal);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -151,5 +159,27 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.01em;
   }
 }
+
+@utility eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+@utility surface-spa {
+  background-image: var(--gradient-spa);
+}
+
